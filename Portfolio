@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tahmid A. Promit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="jumbotron">
+
+    <video id="background-video" autoplay loop muted>
+        <source src="D:\bdjobs\Portfolio\vid1.mp4" type="video/mp4">
+    </video>
+    
+    <div class="container">
+    <h1>Explore the limitless opportunaites.</h1>
+    <a href="newpage.html" class="btn btn-primary">Explore</a>
+    </div>
+</div>
+  
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tahmid A. Promit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color:rgb(17, 214, 158);">
+    <header>
+        <div class="container">
+          <div class="logo">
+            <img src="logo.png" alt="Logo">
+          </div>
+          <!-- <nav class="nav-links ml-auto">
+            <a href="#">Explore</a>
+            <a href="#">About</a>
+          </nav> -->
+          <ul class="nav-links ml-auto">
+            
+              <a class="nav-link" href="explore.html">Explore</a>
+            
+            
+              <a class="nav-link" href="about.html">About</a>
+            
+          </ul>
+        </div>
+      </header>
+      
+      
+      
+
+  <main>
+    <section class="image-section">
+        <div class="container">
+          <div class="image-wrapper">
+            <img src="w1.jpg" alt="Image" class="background-image">
+            <div class="textbox">
+              <h2>Web Development</h2>
+              <p>Web development, also known as website development, refers to the tasks associated with creating, 
+                building, and maintaining websites and web applications that run online on a browser..</p>
+              <a href="#" class="seemore">See More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="image-section2">
+        <div class="container2">
+          <div class="image-wrapper2">
+            <img src="w2.png" alt="Image" class="background-image2">
+            <div class="textbox2">
+              <h2>Cloud Computing</h2>
+              <p> Simply put, cloud computing is the delivery of computing services—over the internet (“the cloud”)</p>
+              <a href="#" class="seemore">See More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+     <div class="jumbotron">
+
+        <video id="background-video" autoplay loop muted>
+            <source src="D:\bdjobs\Portfolio\vid3.mp4" type="video/mp4">
+        </video>
+        
+        
+        <div class="image-wrapper3">
+            <img src="w4.jpg" alt="Image" class="background-image3">
+            <div class="textbox3">
+            <h2>Cyber Secutriy</h2>
+            <p>Cyber security is the practice of defending computers, servers, mobile devices, 
+                electronic systems, networks, and data from malicious attacks.</p>
+            <a href="#" class="seemore">See More</a>
+            </div>
+            
+    </div>
+
+
+      
+  </main>
+
+  <footer>
+    <!-- <div class="container">
+      <div class="tw">@2023 Tahmid Ashrafee Promit. </div>
+    </div> -->
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>@ 2023 Tahmid A. Promit. All rights reserved.</p>
+            </div>
+            
+            
+      </footer>
+      
+    
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.5.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
+
+document.addEventListener('DOMContentLoaded', function() {
+    var exploreBtn = document.getElementById('explore-btn');
+    exploreBtn.addEventListener('click', function() {
+      // Add your command or action here
+      console.log('Explore button clicked!');
+      // Perform additional tasks or navigate to a new page
+      window.location.href = 'newpage.html';
+    });
+  });
+  
+  $(document).ready(function() {
+    var slides = $('.slide');
+    var currentIndex = 0;
+  
+    // Initial slide
+    slides.eq(currentIndex).css('opacity', 1);
+  
+    $('a').click(function(event) {
+      event.preventDefault();
+      var url = $(this).attr('href');
+  
+      // Fade out current slide
+      slides.eq(currentIndex).animate({
+        opacity: 0
+      }, 300, function() {
+        // Navigate to new page
+        window.location = url;
+      });
+    });
+  });
+    
